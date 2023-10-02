@@ -95,6 +95,7 @@ class AllProductsSection extends Component {
     // TODO: Update the code to get products with filters applied
 
     const {activeOptionId, search, rating, category} = this.state
+    console.log(search, category, rating, 'hii')
     const apiUrl = `https://apis.ccbp.in/products?sort_by=${activeOptionId}&title_search=${search}&category=${category}&rating=${rating}`
     const options = {
       headers: {

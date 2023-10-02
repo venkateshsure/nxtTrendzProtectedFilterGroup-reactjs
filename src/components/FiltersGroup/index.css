@@ -12,3 +12,26 @@
 }
 
 /* Write your CSS here */
+
+.category-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.rating-list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.rating-list-con {
+  width: 30%;
+}
+
+.rating-image {
+  width: 150px;
+  height: 50px;
+}

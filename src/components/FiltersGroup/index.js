@@ -38,7 +38,7 @@ const FiltersGroup = props => {
       />
       <BsSearch />
 
-      <div>
+      <div className="category-items">
         <h1>Category</h1>
         {categoryOptions.map(each => (
           <p
@@ -49,16 +49,29 @@ const FiltersGroup = props => {
           </p>
         ))}
       </div>
-      <div>
-        <h1>Rating</h1>
+      <h1>Rating</h1>
+      <ul className="rating-list-con">
         {ratingsList.map(each => (
-          <list key={each.ratingId}>
-            <img alt={`rating ${each.ratingId}`} src={each.imageUrl} />
-            <p onClick={() => clickRating(each.ratingId)}>&up</p>
+          <list
+            className="rating-list-item"
+            onClick={() => clickRating(each.ratingId)}
+            key={each.ratingId}
+          >
+            <img
+              className="rating-image"
+              alt={`rating ${each.ratingId}`}
+              src={each.imageUrl}
+            />
+            <p>&up</p>
           </list>
         ))}
-      </div>
-      <button onClick={onClickFilter} type="button">
+      </ul>
+
+      <button
+        className="clear-filter-button"
+        onClick={onClickFilter}
+        type="button"
+      >
         Clear Filters
       </button>
     </div>
